@@ -12,8 +12,19 @@ class homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
+
+      highContrastDarkTheme: ThemeData.light(),
       // home: CunterAPP(),/
       home: PagesWidgets(),
     );
+
+
+
+    
   }
+
+
+
 }

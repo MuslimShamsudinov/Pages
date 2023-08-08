@@ -1,10 +1,13 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/HomePage.dart';
+import 'package:flutter_application_1/Profile.dart';
 import 'package:flutter_application_1/SecondPage.dart';
+
 import 'package:flutter_application_1/test.dart';
 import 'package:flutter_application_1/test2.dart';
 import 'package:flutter_application_1/test3.dart';
+import 'package:flutter_application_1/videoreels.dart';
 
 class PagesWidgets extends StatefulWidget {
   const PagesWidgets({super.key});
@@ -19,13 +22,17 @@ class _PagesWidgetsState extends State<PagesWidgets> {
   final _pegesWidgets = [
     CunterAPP(),
     SECONdPAGE(),
-    Test1(),
-    Test2(),
+    // Home(),
+// ConversationList(),
+
     Test3(),
+    Reels(),
+    Instagram()
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: _pegesWidgets[_page],
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
@@ -33,19 +40,19 @@ class _PagesWidgetsState extends State<PagesWidgets> {
         height: 60.0,
         items: [
           Icon(
-            Icons.add,
+            Icons.home,
             size: 30,
           ),
           Icon(
-            Icons.list,
+            Icons.search,
             size: 30,
           ),
           Icon(
-            Icons.compare_arrows,
+            Icons.video_collection,
             size: 30,
           ),
           Icon(
-            Icons.call_split,
+            Icons.my_library_music_outlined,
             size: 30,
           ),
           Icon(
@@ -63,7 +70,6 @@ class _PagesWidgetsState extends State<PagesWidgets> {
             _page = index;
           });
         },
-        letIndexChange: (index) => true,
       ),
     );
   }
