@@ -13,9 +13,13 @@ class _InstagramState extends State<Instagram> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
+      
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.deepPurple,
+        
         title: Column(
+          
           children: [
             SizedBox(width: 5,),
             Row(
@@ -63,10 +67,10 @@ class _InstagramState extends State<Instagram> {
                 InkWell(onTap: () {},
                   child: Column(
                     children: [
-                             Text('50,тыс',style: TextStyle(fontSize:18,color: Colors.white ),),
+                             Text('50,тыс',style: TextStyle(fontSize:18,color: Colors.black ),),
                       Text(
                         'Публикации',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.black),
                       ),
                     ],
                   ),
@@ -76,11 +80,11 @@ class _InstagramState extends State<Instagram> {
                     children: [
                       Text(
                         '39,5 млн',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: TextStyle(fontSize: 18, color: Colors.black),
                       ),
                       Text(
                         'Подписчики',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: TextStyle(fontSize: 18, color: Colors.black),
                       ),
                     ],
                   ),
@@ -90,11 +94,11 @@ class _InstagramState extends State<Instagram> {
                     children: [
                       Text(
                         '0',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: TextStyle(fontSize: 18, color: Colors.black),
                       ),
                       Text(
                         'Подписки',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: TextStyle(fontSize: 18, color: Colors.black),
                       ),
                     ],
                   ),
@@ -108,7 +112,7 @@ class _InstagramState extends State<Instagram> {
               ),
               child: Text(
                 "Djamaldinov",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
             Row(
@@ -124,169 +128,169 @@ class _InstagramState extends State<Instagram> {
                   },
                   child: const Text("Изменить"),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[800],
+                    backgroundColor: Colors.deepPurple,
                   ),
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   child: const Text("Поделиться профилем"),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[800],
+                    backgroundColor: Colors.deepPurple,
                   ),
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   child: const Icon(Icons.person_add_outlined),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[800],
+                    backgroundColor: Colors.deepPurple,
                   ),
                 ),
               ],
             ),
-            ListView(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.amberAccent,
-                                radius: 30,
-                              ),
-                              Text(
-                                "у Насти...",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.amberAccent,
-                                radius: 30,
-                              ),
-                              Text(
-                                "Привет...",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.amberAccent,
-                                radius: 30,
-                              ),
-                              Text(
-                                "Сегодня мы...",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.amberAccent,
-                                radius: 30,
-                              ),
-                              Text(
-                                "Halloween...",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.amberAccent,
-                                radius: 30,
-                              ),
-                              Text(
-                                "футбол...",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.amberAccent,
-                                radius: 30,
-                              ),
-                              Text(
-                                "Деревня...",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.amberAccent,
-                                radius: 30,
-                              ),
-                              Text(
-                                "Отличная игра...",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.amberAccent,
-                                radius: 30,
-                              ),
-                              Text(
-                                "Wikend...",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            // ListView(
+            //   scrollDirection: Axis.vertical,
+            //   shrinkWrap: true,
+            //   children: [
+            //     const Padding(
+            //       padding: EdgeInsets.all(10.0),
+            //       child: SingleChildScrollView(
+            //         scrollDirection: Axis.horizontal,
+            //         child: Row(
+            //           children: [
+            //             Padding(
+            //               padding: EdgeInsets.all(8.0),
+            //               child: Column(
+            //                 children: [
+            //                   CircleAvatar(
+            //                     backgroundColor: Colors.amberAccent,
+            //                     radius: 30,
+            //                   ),
+            //                   Text(
+            //                     "у Насти...",
+            //                     style: TextStyle(
+            //                         fontSize: 18, color: Colors.black),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             Padding(
+            //               padding: EdgeInsets.all(8.0),
+            //               child: Column(
+            //                 children: [
+            //                   CircleAvatar(
+            //                     backgroundColor: Colors.amberAccent,
+            //                     radius: 30,
+            //                   ),
+            //                   Text(
+            //                     "Привет...",
+            //                     style: TextStyle(
+            //                         fontSize: 18, color: Colors.black),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             Padding(
+            //               padding: EdgeInsets.all(8.0),
+            //               child: Column(
+            //                 children: [
+            //                   CircleAvatar(
+            //                     backgroundColor: Colors.amberAccent,
+            //                     radius: 30,
+            //                   ),
+            //                   Text(
+            //                     "Сегодня мы...",
+            //                     style: TextStyle(
+            //                         fontSize: 18, color: Colors.black),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             Padding(
+            //               padding: EdgeInsets.all(8.0),
+            //               child: Column(
+            //                 children: [
+            //                   CircleAvatar(
+            //                     backgroundColor: Colors.amberAccent,
+            //                     radius: 30,
+            //                   ),
+            //                   Text(
+            //                     "Halloween...",
+            //                     style: TextStyle(
+            //                         fontSize: 18, color: Colors.black),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             Padding(
+            //               padding: EdgeInsets.all(8.0),
+            //               child: Column(
+            //                 children: [
+            //                   CircleAvatar(
+            //                     backgroundColor: Colors.amberAccent,
+            //                     radius: 30,
+            //                   ),
+            //                   Text(
+            //                     "футбол...",
+            //                     style: TextStyle(
+            //                         fontSize: 18, color: Colors.black),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             Padding(
+            //               padding: EdgeInsets.all(8.0),
+            //               child: Column(
+            //                 children: [
+            //                   CircleAvatar(
+            //                     backgroundColor: Colors.amberAccent,
+            //                     radius: 30,
+            //                   ),
+            //                   Text(
+            //                     "Деревня...",
+            //                     style: TextStyle(
+            //                         fontSize: 18, color: Colors.black),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             Padding(
+            //               padding: EdgeInsets.all(8.0),
+            //               child: Column(
+            //                 children: [
+            //                   CircleAvatar(
+            //                     backgroundColor: Colors.amberAccent,
+            //                     radius: 30,
+            //                   ),
+            //                   Text(
+            //                     "Отличная игра...",
+            //                     style: TextStyle(
+            //                         fontSize: 18, color: Colors.black),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             Padding(
+            //               padding: EdgeInsets.all(8.0),
+            //               child: Column(
+            //                 children: [
+            //                   CircleAvatar(
+            //                     backgroundColor: Colors.amberAccent,
+            //                     radius: 30,
+            //                   ),
+            //                   Text(
+            //                     "Wikend...",
+            //                     style: TextStyle(
+            //                         fontSize: 18, color: Colors.black),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //           ],
+            //         ),
+            //       ),
+            //     ),
+            //   ],
+            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -294,13 +298,13 @@ class _InstagramState extends State<Instagram> {
                     onPressed: () {},
                     icon: Icon(
                       Icons.grid_on_sharp,
-                      color: Colors.white,
+                      color: Colors.black,
                     )),
                 IconButton(
                     onPressed: () {},
                     icon: Icon(
                       Icons.person_pin_outlined,
-                      color: Colors.white,
+                      color: Colors.black,
                     ))
                 // Icon(
 
@@ -386,7 +390,7 @@ class _InstagramState extends State<Instagram> {
           ],
         ),
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
     );
   }
 }

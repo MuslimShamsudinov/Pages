@@ -59,7 +59,7 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Insta Chats",
+                    "World Chats",
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
@@ -68,7 +68,7 @@ class Home extends StatelessWidget {
                   Container(
                     height: 30,
                     decoration: BoxDecoration(
-                      color: Colors.pink[50],
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     padding:
@@ -77,7 +77,7 @@ class Home extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.abc,
-                          color: Colors.pinkAccent,
+                          color: Colors.black,
                           size: 20,
                         ),
                         SizedBox(
@@ -86,7 +86,7 @@ class Home extends StatelessWidget {
                         Text(
                           "Add New",
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                              fontSize: 14, fontWeight: FontWeight.bold,color: Colors.white),
                         ),
                       ],
                     ),

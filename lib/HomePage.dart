@@ -13,47 +13,94 @@ class _CunterAPPState extends State<CunterAPP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(elevation: 0, backgroundColor: Colors.white, actions: [
-        IconButton(
-            onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => Home(),
-              //   ),
-              // );
-            },
-            icon: Icon(
-              Icons.search_rounded,size: 30,
-              color: Colors.black,
-            )),
-        IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Home(),
-                ),
-              );
-            },
-            icon: Icon(
-              Icons.send,
-              color: Colors.black,size: 25,
-            )),
-        // Icon(
-        //   Icons.message_sharp,
-        //   color: Colors.black,
-        // ),
-        SizedBox(
-          width: 20,
-        ),
-      ]),
-      body: Center(
-        child: Text(
-          'hi',
-          style: TextStyle(fontSize: 50, color: Colors.red),
-        ),
-      ),
-    );
+        backgroundColor: Colors.white,
+        appBar: AppBar(elevation: 0, backgroundColor: Colors.deepPurple, actions: [
+          IconButton(
+              onPressed: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => Home(),
+                //   ),
+                // );
+              },
+              icon: Icon(
+                Icons.search_rounded,
+                size: 30,
+                color: Colors.white,
+              )),
+          IconButton(
+              onPressed: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => Home(),
+                //   ),
+                // );
+              },
+              icon: Icon(
+                Icons.live_tv_sharp,
+                size: 30,
+                color: Colors.white,
+              )),
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Home(),
+                  ),
+                );
+              },
+              icon: Icon(
+                Icons.send,
+                color: Colors.white,
+                size: 25,
+              )),
+          // Icon(
+          //   Icons.message_sharp,
+          //   color: Colors.black,
+          // ),
+          SizedBox(
+            width: 20,
+          ),
+        ]),
+        body: Center(
+          child: Column(
+            children: [
+              GridView.count(
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                primary: false,
+                padding: const EdgeInsets.all(10),
+                crossAxisSpacing: 3,
+                mainAxisSpacing: 3,
+                crossAxisCount: 3,
+                children: <Widget>[
+                  Container(
+                    height: 180,
+                    padding: EdgeInsets.all(8),
+                    color: Colors.teal[100],
+                    child: Text(
+                      "He'd have you all unravel at the",
+                    ),
+                  ),
+                ],
+              )
+              // Container(
+              //
+              // decoration: BoxDecoration(
+              //  color: Colors.white,
+              // borderRadius: BorderRadius.circular(20)
+              // ),
+              //
+              // height: 550,
+              // width: 450,
+              //
+              // child: Center(child: Text('Hello')),
+              // ),
+            ],
+          ),
+        ));
   }
 }

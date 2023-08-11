@@ -19,6 +19,7 @@ class PagesWidgets extends StatefulWidget {
 class _PagesWidgetsState extends State<PagesWidgets> {
   int _page = 0;
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+
   final _pegesWidgets = [
     CunterAPP(),
     SECONdPAGE(),
@@ -26,7 +27,7 @@ class _PagesWidgetsState extends State<PagesWidgets> {
 // ConversationList(),
 
     Test3(),
-    Reels(),
+
     Instagram()
   ];
   @override
@@ -51,18 +52,18 @@ class _PagesWidgetsState extends State<PagesWidgets> {
             Icons.video_collection,
             size: 30,
           ),
-          Icon(
-            Icons.my_library_music_outlined,
-            size: 30,
-          ),
+          // Icon(
+          //   Icons.my_library_music_outlined,
+          //   size: 30,
+          // ),
           Icon(
             Icons.perm_identity,
             size: 30,
           ),
         ],
         color: Colors.white,
-        buttonBackgroundColor: Colors.red,
-        backgroundColor: Colors.black,
+        buttonBackgroundColor: Colors.white,
+        backgroundColor: Colors.deepPurple,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(seconds: 1),
         onTap: (index) {
