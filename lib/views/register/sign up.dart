@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_application_1/pages.dart';
+import 'package:flutter_application_1/views/page/pages_stages.dart';
 
 class LoginPage2 extends StatefulWidget {
   const LoginPage2({super.key});
@@ -22,22 +22,24 @@ class _LoginPageState extends State<LoginPage2> {
   Widget build(BuildContext context) {
     myColor = Theme.of(context).primaryColor;
     mediaSize = MediaQuery.of(context).size;
-    return Container(
-      decoration: BoxDecoration(
-        color: myColor,
-        image: DecorationImage(
-          image: AssetImage("assets/images/road.jpeg"),
-          fit: BoxFit.cover,
-          colorFilter:
-              ColorFilter.mode(myColor.withOpacity(0.2), BlendMode.dstATop),
+    return Center(
+      child: Container(
+        decoration: BoxDecoration(
+          color: myColor,
+          image: DecorationImage(
+            image: AssetImage("assets/images/road.jpeg"),
+            fit: BoxFit.cover,
+            colorFilter:
+                ColorFilter.mode(myColor.withOpacity(0.2), BlendMode.dstATop),
+          ),
         ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Stack(children: [
-          // Positioned(top: 80, child: _buildTop()),
-          Positioned(bottom: 0, child: _buildBottom()),
-        ]),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Stack(children: [
+            // Positioned(top: 80, child: _buildTop()),
+            Positioned(bottom: 0, child: _buildBottom()),
+          ]),
+        ),
       ),
     );
   }
@@ -117,7 +119,7 @@ class _LoginPageState extends State<LoginPage2> {
 
         _buildRememberForget(),
         SizedBox(
-          height: 20,
+          height: MediaQuery.of(context).size.height * 0.03,
         ),
         _buildLoginButton(),
         SizedBox(
@@ -140,23 +142,24 @@ class _LoginPageState extends State<LoginPage2> {
 
   Widget _buildGreyText2(String text) {
     return Center(
-      child:DefaultTextStyle(
-  style:  TextStyle(
-    fontWeight: FontWeight.bold,
-    fontSize: 25.0,
-  ),
-  child: AnimatedTextKit(
-    animatedTexts: [
-      WavyAnimatedText('Please  Sign up',textStyle: TextStyle(color: Colors.black), ),
-  
-    ],
-    isRepeatingAnimation:true,
-    onTap: () {
-      print("Tap Event");
-    },
-  ),
-),
-
+      child: DefaultTextStyle(
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 25.0,
+        ),
+        child: AnimatedTextKit(
+          animatedTexts: [
+            WavyAnimatedText(
+              'Please  Sign up',
+              textStyle: TextStyle(color: Colors.black),
+            ),
+          ],
+          isRepeatingAnimation: true,
+          onTap: () {
+            print("Tap Event");
+          },
+        ),
+      ),
     );
   }
 
@@ -165,34 +168,43 @@ class _LoginPageState extends State<LoginPage2> {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        suffixIcon: isPassword ? Icon(Icons.remove_red_eye) : Icon(Icons.done),
+        suffixIcon: isPassword
+            ? Icon(
+                Icons.remove_red_eye,
+                color: Colors.deepPurple,
+              )
+            : Icon(
+                Icons.done,
+                color: Colors.deepPurple,
+              ),
       ),
       obscureText: isPassword,
     );
-   
   }
 
   Widget _buildRememberForget() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
-          children: [
-            Checkbox(
-                value: rememberUser,
-                onChanged: (value) {
-                  setState(() {
-                    rememberUser = value!;
-                  });
-                }),
-            _buildGreyText("Remember me")
-          ],
-        ),
-        TextButton(
-          onPressed: () {},
-          child: _buildGreyText("I forgot my password"),
-        ),
-      ],
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.5,
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Checkbox(
+                  value: rememberUser,
+                  onChanged: (value) {
+                    setState(() {
+                      rememberUser = value!;
+                    });
+                  }),
+              _buildGreyText("Remember me")
+            ],
+          ),
+          TextButton(
+            onPressed: () {},
+            child: _buildGreyText("I forgot my password"),
+          ),
+        ],
+      ),
     );
   }
 

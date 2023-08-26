@@ -1,13 +1,12 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/HomePage.dart';
-import 'package:flutter_application_1/Profile.dart';
-import 'package:flutter_application_1/SecondPage.dart';
+import 'package:flutter_application_1/views/secondHome/HomePage.dart';
+import 'package:flutter_application_1/views/SecondPage.dart';
+import 'package:flutter_application_1/views/profille.dart/home%20profile.dart';
 
-import 'package:flutter_application_1/test.dart';
-import 'package:flutter_application_1/test2.dart';
-import 'package:flutter_application_1/test3.dart';
-import 'package:flutter_application_1/videoreels.dart';
+import 'package:flutter_application_1/views/second/SecondPage.dart';
+import 'package:flutter_application_1/views/test/test3.dart';
+import 'package:flutter_application_1/widjets/videoreels.dart';
 
 class PagesWidgets extends StatefulWidget {
   const PagesWidgets({super.key});

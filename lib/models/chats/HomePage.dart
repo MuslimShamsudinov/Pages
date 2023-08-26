@@ -1,5 +1,8 @@
+
+
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/test2.dart';
+import 'package:flutter_application_1/views/second/SecondPage.dart';
+import 'package:flutter_application_1/models/chats/model/chat.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -8,15 +11,18 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         backgroundColor: Colors.white,
-         elevation: 0,
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
       body: content(),
     );
   }
 
   Widget content() {
+ 
+
     List<Chatuser> chatUsers = [
+      
       Chatuser(
           name: "Janibek",
           messageText: "Awesome Setup",
@@ -86,7 +92,9 @@ class Home extends StatelessWidget {
                         Text(
                           "Add New",
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold,color: Colors.white),
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
                         ),
                       ],
                     ),
@@ -126,12 +134,15 @@ class Home extends StatelessWidget {
             padding: EdgeInsets.only(top: 16),
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: ((context, index) {
-              return ConversationList(
-                name: chatUsers[index].name,
-                messageText: chatUsers[index].messageText,
-                imageURl: chatUsers[index].imageURl,
-                isMessageRead: (index == 0 || index == 3) ? true : false,
-                time: chatUsers[index].time,
+              return Container(
+                color: Colors.white,
+                child: ConversationList(
+                  name: chatUsers[index].name,
+                  messageText: chatUsers[index].messageText,
+                  imageURl: chatUsers[index].imageURl,
+                  isMessageRead: (index == 0 || index == 3) ? true : false,
+                  time: chatUsers[index].time,
+                ),
               );
             }),
           ),

@@ -2,8 +2,8 @@ import 'dart:ui';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_application_1/pages.dart';
-import 'package:flutter_application_1/register/Register3.dart';
+import 'package:flutter_application_1/views/page/pages_stages.dart';
+import 'package:flutter_application_1/views/register/sign%20up.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -22,22 +22,24 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     myColor = Theme.of(context).primaryColor;
     mediaSize = MediaQuery.of(context).size;
-    return Container(
-      decoration: BoxDecoration(
-        color: myColor,
-        image: DecorationImage(
-          image: AssetImage("assets/images/road.jpeg"),
-          fit: BoxFit.cover,
-          colorFilter:
-              ColorFilter.mode(myColor.withOpacity(0.2), BlendMode.dstATop),
+    return Center(
+      child: Container(
+        decoration: BoxDecoration(
+          color: myColor,
+          image: DecorationImage(
+            image: AssetImage("assets/images/road.jpeg"),
+            fit: BoxFit.cover,
+            colorFilter:
+                ColorFilter.mode(myColor.withOpacity(0.2), BlendMode.dstATop),
+          ),
         ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Stack(children: [
-          // Positioned(top: 80, child: _buildTop()),
-          Positioned(bottom: 0, child: _buildBottom()),
-        ]),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Stack(children: [
+            // Positioned(top: 80, child: _buildTop()),
+            Positioned(bottom: 0, child: _buildBottom()),
+          ]),
+        ),
       ),
     );
   }
@@ -150,33 +152,39 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _buildRememberForget() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
+    return SizedBox(width: MediaQuery.of(context).size.width * 0.5,
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row( 
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Checkbox(
-                value: rememberUser,
-                onChanged: (value) {
-                  setState(() {
-                    rememberUser = value!;
-                  });
-                }),
-            _buildGreyText("Remember me")
+            Row(
+              children: [
+                Checkbox(
+                    value: rememberUser,
+                    onChanged: (value) {
+                      setState(() {
+                        rememberUser = value!;
+                      });
+                    }),
+                _buildGreyText("Remember me")
+              ],
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => LoginPage2()));
+              },
+              child: _buildGreyText("I forgot my password"),
+            ),
           ],
         ),
-        TextButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => LoginPage2()));
-          },
-          child: _buildGreyText("I forgot my password"),
-        ),
-      ],
+      ),
     );
   }
 
   Widget _buildLoginButton() {
+    
     return ElevatedButton(
       onPressed: () {
         debugPrint("Email : ${emailController.text}");
@@ -200,7 +208,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _buildOtherLogin() {
+Widget _buildOtherLogin() {
     return Center(
       child: Column(
         children: [

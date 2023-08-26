@@ -90,6 +90,7 @@ class Chatuser {
   String imageURl;
   String time;
   Chatuser(
+    
       {required this.name,
       required this.messageText,
       required this.imageURl,

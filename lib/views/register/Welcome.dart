@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/register/Register.dart';
-import 'package:flutter_application_1/register/Register3.dart';
+import 'package:flutter_application_1/views/register/login%20up.dart';
+import 'package:flutter_application_1/views/register/sign%20up.dart';
 
 class REGISTER2 extends StatefulWidget {
   const REGISTER2({super.key});

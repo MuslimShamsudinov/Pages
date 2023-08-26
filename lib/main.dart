@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/HomePage.dart';
-import 'package:flutter_application_1/pages.dart';
-import 'package:flutter_application_1/register/Register.dart';
-import 'package:flutter_application_1/register/Rgister2.dart';
+import 'package:flutter_application_1/views/secondHome/HomePage.dart';
+import 'package:flutter_application_1/views/page/pages_stages.dart';
+import 'package:flutter_application_1/views/register/login%20up.dart';
+import 'package:flutter_application_1/views/register/Welcome.dart';
 
 void main() {
   runApp(homepage());
